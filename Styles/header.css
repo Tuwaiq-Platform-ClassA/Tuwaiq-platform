@@ -1,0 +1,133 @@
+* {
+  padding: 0;
+  margin: 0px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-bar {
+  background-color: white;
+  box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.light-part {
+  background-color: #f8f8f8;
+  box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.2);
+  transform: rotate(-30deg);
+  border-radius: 100px;
+  width: 500px;
+  height: 500px;
+  position: relative;
+  left: 100px;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.content-light {
+  transform: rotate(30deg);
+  padding: 15px;
+  position: relative;
+  bottom: 50px;
+  right: 100px;
+}
+.content-light img {
+  width: 50%;
+}
+.content-dark img {
+  width: 50%;
+}
+.dark-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  background-color: #0f1216;
+  box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 70px;
+  bottom: 300px;
+  height: 100vh;
+  position: relative;
+
+  z-index: -2;
+}
+.content-dark {
+  color: white;
+  padding: 15px;
+  position: relative;
+  bottom: 50px;
+  right: 100px;
+}
+
+.btn {
+  padding: 10px;
+  width: 200px;
+  background-color: #00adbb;
+  border: 0;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.2);
+}
+.btn-outline {
+  padding: 10px;
+  width: 200px;
+  border: 1px solid #00adbb;
+  border-radius: 10px;
+  color: #00adbb;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.2);
+}
+.btns {
+  display: none;
+}
+@media only screen and (min-width: 800px) {
+  .collapse {
+    display: none;
+  }
+
+  .btns {
+    display: block;
+  }
+  .container {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .light-part {
+    width: 600px;
+    height: 600px;
+    top: 200px;
+  }
+  .dark-part {
+    width: 600px;
+    height: 600px;
+    top: 200px;
+    bottom: 0px;
+    left: 100px;
+    transform: rotate(-30deg);
+    justify-content: space-between;
+  }
+  .content-dark {
+    transform: rotate(30deg);
+    position: relative;
+    bottom: 200px;
+  }
+  .content-dark img {
+    width: 75%;
+  }
+  .content-light {
+    position: relative;
+    bottom: 200px;
+  }
+  .content-light img {
+    width: 75%;
+  }
+}
